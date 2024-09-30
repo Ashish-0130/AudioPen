@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_bar"
+        android:text="Micwriting"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="#004C8C"
+        android:background="#80D8FF"
+        android:padding="12dp"
+        android:layout_alignParentTop="true" />
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:layout_above="@id/button_container"
+        android:padding="10dp"> <!-- Added padding -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" /> <!-- Added margin -->
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Backgrounds Tab Content -->
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="8dp"> <!-- Added margin -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Choose Background"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="8dp"
+                        android:layout_marginBottom="8dp" /> <!-- Added margin -->
+
+                    <Spinner
+                        android:id="@+id/background_spinner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="8dp"> <!-- Added margin -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Choose Fonts"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="8dp"
+                        android:layout_marginBottom="8dp" /> <!-- Added margin -->
+
+                    <Spinner
+                        android:id="@+id/fonts_spinner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+    <!-- LinearLayout for buttons at the bottom -->
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_background_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Background"
+            android:textColor="#004C8C"
+            android:background="@drawable/rounded_button"
+            android:layout_marginEnd="8dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/start_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="START"
+            android:textColor="#004C8C"
+            android:background="@drawable/rounded_button"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

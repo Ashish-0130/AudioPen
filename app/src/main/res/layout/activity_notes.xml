@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <!-- Play/Pause/Stop Buttons in a LinearLayout -->
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_centerHorizontal="true">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play"
+            android:textColor="#004C8C"
+            android:background="@drawable/rounded_button"
+            android:layout_marginEnd="8dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/pause_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            android:textColor="#004C8C"
+            android:background="@drawable/rounded_button"
+            android:layout_marginEnd="8dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:textColor="#004C8C"
+            android:background="@drawable/rounded_button" />
+    </LinearLayout>
+
+    <!-- Label for Blur SeekBar -->
+    <TextView
+        android:id="@+id/blur_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/blur_seekbar"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="16dp"
+        android:text="Blur Background"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <!-- Blur SeekBar -->
+    <SeekBar
+        android:id="@+id/blur_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_container"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:progress="0" />
+
+    <!-- Label for Font Size SeekBar -->
+    <TextView
+        android:id="@+id/font_size_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/font_size_seekbar"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="16dp"
+        android:text="Font Size"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <!-- Font Size SeekBar -->
+    <SeekBar
+        android:id="@+id/font_size_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/blur_seekbar"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:progress="16" />
+
+    <!-- Label for Font Color SeekBar -->
+    <TextView
+        android:id="@+id/font_color_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/font_color_seekbar"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="16dp"
+        android:text="Font Color"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <!-- Font Color SeekBar -->
+    <SeekBar
+        android:id="@+id/font_color_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/font_size_seekbar"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:progress="0" />
+
+    <!-- Notes TextView -->
+    <TextView
+        android:id="@+id/notes_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/font_color_label"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:text="Your notes will appear here..." />
+
+</RelativeLayout>

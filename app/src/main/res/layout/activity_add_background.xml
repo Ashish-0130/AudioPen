@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_bar1"
+        android:text="Micwriting"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="#004C8C"
+        android:background="#80D8FF"
+        android:layout_alignParentTop="true"
+        android:padding="12dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar1"
+        android:layout_marginTop="20sp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/selected_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:background="#DDD"
+            android:layout_alignParentTop="true" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/select_image_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Image from Gallery"
+            android:layout_below="@id/selected_image_view"
+            android:layout_marginTop="16dp"
+            android:textColor="#004C8C"
+            android:background="@drawable/rounded_button" />
+
+        <EditText
+            android:id="@+id/image_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter name for image"
+            android:layout_below="@id/select_image_button"
+            android:layout_marginTop="16dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_image_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Background"
+            android:padding="10dp"
+            android:textSize="18dp"
+            android:layout_below="@id/image_name"
+            android:layout_marginTop="16dp"
+            android:textColor="#004C8C"
+            android:background="@drawable/rounded_button" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
